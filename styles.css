@@ -78,7 +78,7 @@ nav a:hover, .text-link:hover, .social-row a:hover, .footer-inner a:hover { opac
 .section-heading > p, .experience-intro > p:last-child { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.75; }
 
 .project-list { border-top: 1px solid var(--ink); }
-.project { display: grid; grid-template-columns: 70px 1fr 52px; gap: 28px; padding: 42px 0; border-bottom: 1px solid var(--line); transition: background 200ms ease,padding 200ms ease; }
+.project { display: grid; grid-template-columns: 1fr 52px; gap: 28px; padding: 42px 0; border-bottom: 1px solid var(--line); transition: background 200ms ease,padding 200ms ease; }
 .project:hover { padding-inline: 22px; background: var(--white); }
 .project-number { color: var(--muted); font-size: 11px; }
 .project-label { margin: 0 0 12px; color: var(--blue); font-size: 10px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
@@ -202,7 +202,7 @@ footer { background: var(--blue); color: rgba(255,255,255,.66); }
   .work, .toolkit { padding-block: 88px; }
   .section-heading { grid-template-columns: 1fr; gap: 26px; margin-bottom: 48px; }
   .section-heading h2, .experience-intro h2, .contact h2 { font-size: 44px; }
-  .project { grid-template-columns: 38px 1fr; gap: 12px; padding: 34px 0; }
+  .project { grid-template-columns: 1fr; gap: 12px; padding: 24px 0; }
   .project:hover { padding-inline: 0; }
   .project-arrow { display: none; }
   .placeholder-note { flex-direction: column; }
