@@ -17,10 +17,12 @@
         <span class="brand-mark">GS</span>
         <span class="brand-name">Gokul Saradhi</span>
       </a>
-      <nav aria-label="Primary navigation">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <nav id="primary-nav" aria-label="Primary navigation">
         <a href="#work">Work</a>
         <a href="#experience">Experience</a>
         <a href="#journey">Journey</a>
+        <a href="#learning-now">Learning</a>
       </nav>
       <a class="header-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
     </header>
@@ -62,6 +64,8 @@
           <div class="code-line" aria-hidden="true"><span>01</span> build(idea) → interface → impact</div>
         </aside>
       </section>
+
+      <!-- learning-now section moved earlier in the document for priority -->
 
       <div class="proof-strip" aria-label="Career highlights">
         <div><strong>3.5+</strong><span>years in frontend</span></div>
@@ -212,18 +216,47 @@
         </div>
       </section>
 
+      <section class="learning-now section-shell" id="learning-now">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker light">04 / Learning &amp; Upskilling</p>
+            <h2>Becoming a Full‑Stack AI Engineer</h2>
+          </div>
+          <p>
+            I'm currently enrolled in Bosscoder's Transformers Program, where I'm
+            strengthening my software engineering foundations while expanding into AI.
+          </p>
+        </div>
+
+        <div class="learning-content reveal-up delay-2">
+          <h3>Learning focus</h3>
+          <ul class="learning-list">
+            <li>Data Structures &amp; Algorithms</li>
+            <li>System Design</li>
+            <li>Python &amp; Full‑Stack Development</li>
+            <li>AI / LLM applications</li>
+            <li>Building end-to-end software projects</li>
+          </ul>
+
+          <p><strong>My goal:</strong> Become a Full‑Stack AI Engineer capable of designing, building, and deploying intelligent applications at scale.</p>
+
+          <p>I enjoy learning in public and continuously improving through real-world projects. I document demos and projects here as they mature — open to collaborations and feedback.</p>
+        </div>
+      </section>
+
       <section class="contact" id="contact">
         <div class="section-shell contact-inner">
           <p class="section-kicker light">04 / Let’s build something useful</p>
           <h2>Have a frontend problem that needs a calm, product-minded engineer?</h2>
-          <a class="contact-button" href="mailto:your-email@example.com">
-            your-email@example.com <span aria-hidden="true">↗</span>
-          </a>
+          <div class="contact-links">
+              <a class="contact-button" href="mailto:saradhi443@gmail.com">saradhi443@gmail.com <span aria-hidden="true">↗</span></a>
+              <a class="contact-button" href="tel:+919030287888">+91 9030287888 <span aria-hidden="true">↗</span></a>
+            </div>
           <p class="contact-placeholder">Replace the email above, then add your final resume and profile links below.</p>
           <div class="social-row">
-            <a href="https://github.com/your-username">GitHub <span>↗</span></a>
-            <a href="https://linkedin.com/in/your-profile">LinkedIn <span>↗</span></a>
-            <a href="https://x.com/simply_gokul">X / Twitter <span>↗</span></a>
+            <a href="https://github.com/simplygokul" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+            <a href="https://www.linkedin.com/in/gokul-saradhi-0830a365/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+            <a href="https://x.com/simply_gokul" target="_blank" rel="noopener noreferrer">X / Twitter <span>↗</span></a>
           </div>
         </div>
       </section>
@@ -236,5 +269,29 @@
         <a href="#top">Back to top ↑</a>
       </div>
     </footer>
+    <script>
+      // Mobile nav toggle
+      (function(){
+        const btn = document.querySelector('.nav-toggle');
+        const body = document.body;
+        const nav = document.getElementById('primary-nav');
+        if (!btn || !nav) return;
+        btn.addEventListener('click', () => {
+          const open = body.classList.toggle('nav-open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          // prevent background scroll when open
+          if (open) document.documentElement.style.overflow = 'hidden';
+          else document.documentElement.style.overflow = '';
+        });
+        // close when a nav link is clicked
+        nav.addEventListener('click', (e)=>{
+          if (e.target.tagName === 'A' && body.classList.contains('nav-open')) {
+            body.classList.remove('nav-open');
+            btn.setAttribute('aria-expanded','false');
+            document.documentElement.style.overflow = '';
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
