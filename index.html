@@ -10,19 +10,22 @@
     />
     <title>Gokul Saradhi — Frontend Engineer</title>
     <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
+    <script>document.body.classList.add('js');</script>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Gokul Saradhi, home">
         <span class="brand-mark">GS</span>
         <span class="brand-name">Gokul Saradhi</span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav" aria-haspopup="true"></button>
       <nav id="primary-nav" aria-label="Primary navigation">
         <a href="#learning-now">Learning</a>
         <a href="#experience">Experience</a>
         <a href="#work">Projects</a>
         <a href="#journey">Toolkit</a>
+        <a class="nav-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
       </nav>
       <a class="header-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
     </header>
@@ -249,19 +252,40 @@
         const body = document.body;
         const nav = document.getElementById('primary-nav');
         if (!btn || !nav) return;
-        btn.addEventListener('click', () => {
-          const open = body.classList.toggle('nav-open');
+
+        const setNavState = (open) => {
+          body.classList.toggle('nav-open', open);
           btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-          // prevent background scroll when open
-          if (open) document.documentElement.style.overflow = 'hidden';
-          else document.documentElement.style.overflow = '';
+          btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+          document.documentElement.style.overflow = open ? 'hidden' : '';
+        };
+
+        const closeNav = () => {
+          if (!body.classList.contains('nav-open')) return;
+          setNavState(false);
+        };
+
+        btn.addEventListener('click', () => {
+          setNavState(!body.classList.contains('nav-open'));
         });
-        // close when a nav link is clicked
-        nav.addEventListener('click', (e)=>{
-          if (e.target.tagName === 'A' && body.classList.contains('nav-open')) {
-            body.classList.remove('nav-open');
-            btn.setAttribute('aria-expanded','false');
-            document.documentElement.style.overflow = '';
+
+        nav.addEventListener('click', (event) => {
+          if (event.target.closest('a')) {
+            closeNav();
+          }
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!body.classList.contains('nav-open')) return;
+          if (!nav.contains(event.target) && !btn.contains(event.target)) {
+            closeNav();
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && body.classList.contains('nav-open')) {
+            closeNav();
+            btn.focus();
           }
         });
       })();
