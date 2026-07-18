@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#08111f" />
+    <meta name="theme-color" content="#f6f2ea" />
     <meta
       name="description"
       content="Gokul Saradhi — frontend engineer specializing in React, Next.js and responsive product experiences."
     />
     <title>Gokul Saradhi — Frontend Engineer</title>
     <link rel="stylesheet" href="styles.css" />
-    <script>document.documentElement.classList.add('js');</script>
+    <script>
+      document.documentElement.classList.add('js');
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = savedTheme || (prefersDark ? 'dark' : 'light');
+    </script>
   </head>
   <body>
     <script>document.body.classList.add('js');</script>
@@ -27,7 +32,12 @@
         <a href="#journey">Toolkit</a>
         <a class="nav-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
       </nav>
-      <a class="header-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      <div class="header-controls">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <a class="header-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      </div>
     </header>
 
     <main>
@@ -41,7 +51,7 @@
             I turn complex products into <em>clear, resilient</em> interfaces.
           </h1>
           <p class="hero-intro reveal-up delay-2">
-            Frontend Software Engineer with 3.5 years of professional experience at Jio Platforms. Currently expanding into Python, Full‑Stack development, System Design and AI through Bosscoder's Transformers Program.
+            Frontend Software Engineer with 3.5 years of experience at Jio Platforms, building responsive React and Next.js product experiences. Currently expanding into Python, full-stack systems, system design, and AI through Bosscoder's Transformers Program.
           </p>
           <div class="hero-actions reveal-up delay-3">
             <a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
@@ -51,13 +61,17 @@
 
         <aside class="hero-panel reveal-up delay-2" aria-label="Developer profile snapshot">
           <div class="panel-topline">
-            <span>PROFILE / 2026</span>
-            <span class="live-pill">AVAILABLE</span>
+            <span>PROFILE SNAPSHOT / 2026</span>
+            <span class="live-pill">OPEN</span>
           </div>
           <div class="monogram-wrap" aria-hidden="true">
             <div class="orbit orbit-one"></div>
             <div class="orbit orbit-two"></div>
             <span>G</span>
+          </div>
+          <div class="monogram-caption">
+            <strong>Gokul Saradhi</strong>
+            <span>Frontend Software Engineer</span>
           </div>
           <div class="panel-data">
             <div><small>BASE</small><strong>Andhra Pradesh, India</strong></div>
@@ -251,6 +265,33 @@
         const btn = document.querySelector('.nav-toggle');
         const body = document.body;
         const nav = document.getElementById('primary-nav');
+        const themeBtn = document.querySelector('.theme-toggle');
+        const root = document.documentElement;
+        const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+        const syncThemeButton = () => {
+          if (!themeBtn) return;
+          const dark = root.dataset.theme === 'dark';
+          themeBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+          themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+          themeMeta?.setAttribute('content', dark ? '#0e1723' : '#f7f4ee');
+        };
+
+        syncThemeButton();
+
+        themeBtn?.addEventListener('click', () => {
+          const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+          root.dataset.theme = nextTheme;
+          localStorage.setItem('theme', nextTheme);
+          syncThemeButton();
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+          if (localStorage.getItem('theme')) return;
+          root.dataset.theme = event.matches ? 'dark' : 'light';
+          syncThemeButton();
+        });
+
         if (!btn || !nav) return;
 
         const setNavState = (open) => {
