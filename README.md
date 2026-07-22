@@ -1,31 +1,25 @@
-# Gokul Saradhi — Frontend Portfolio
+# Gokul Saradhi — Technology & Digital Solutions
 
-A responsive, dependency-free portfolio site designed for GitHub Pages.
+A dependency-light, multi-page services website built for GitHub Pages.
 
-## Edit before publishing
+## Pages
 
-Open `index.html` and search for `PLACEHOLDER` or `DETAILS TO ADD`. Replace:
+- `index.html` — commercial services homepage
+- `learning-community.html` — beginner guidance, IT Exposure Radar and community
+- `contact.html` — purpose-specific WhatsApp and email contact paths
+- `privacy.html` — proportional privacy policy
+- `terms.html` — working terms
 
-- the email address;
-- GitHub and LinkedIn profile URLs;
-- project metrics, links and screenshots;
-- the third sample project with a complete case study.
+## Preview
 
-## Preview locally
-
-Open `index.html` directly in a browser, or run a small local server:
+Run a static server in this directory:
 
 ```bash
-python -m http.server 8000
+python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000`.
 
-## Publish on GitHub Pages
+## Maintaining the IT Exposure Radar
 
-1. Create a GitHub repository and upload all files from this folder.
-2. Open **Settings → Pages** in the repository.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select `main`, choose `/ (root)`, and save.
-
-The site uses only relative paths, so it works on both user and project Pages URLs.
+Replace the `.radar-empty` block in `learning-community.html` with checked entries. Each item should include the event name, type, online/offline status, location, date, deadline when available, why it is useful, direct registration link and last-checked date. Remove expired entries.
