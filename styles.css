@@ -10,8 +10,9 @@
   --line: rgba(18, 18, 27, 0.14);
   --blue: #5b61ff;
   --blue-2: #878bff;
-  --coral: #ff765f;
-  --lime: #c9ff74;
+  --gold: #c9a66b;
+  --gold-light: #dfc58f;
+  --gold-soft: rgba(201, 166, 107, 0.16);
   --radius: 18px;
   --shell: min(1220px, calc(100% - 48px));
   --shadow: 0 25px 70px rgba(18, 18, 27, 0.15);
@@ -40,7 +41,7 @@ button {
   font: inherit;
 }
 ::selection {
-  background: var(--coral);
+  background: var(--gold-soft);
   color: var(--ink);
 }
 .shell {
@@ -140,7 +141,7 @@ button {
   bottom: 20px;
   left: 0;
   height: 2px;
-  background: var(--coral);
+  background: var(--gold);
   content: "";
   transform: scaleX(0);
   transition: transform 0.3s var(--ease);
@@ -155,6 +156,7 @@ button {
 }
 .nav-action {
   display: flex;
+  min-height: 44px;
   gap: 18px;
   align-items: center;
   padding: 12px 16px;
@@ -202,8 +204,8 @@ button {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--coral);
-  box-shadow: 0 0 0 5px rgba(255, 118, 95, 0.14);
+  background: var(--gold);
+  box-shadow: 0 0 0 5px var(--gold-soft);
   animation: pulse 2.4s infinite;
 }
 .hero h1,
@@ -223,7 +225,7 @@ button {
   font-size: clamp(56px, 6.5vw, 92px);
 }
 em {
-  color: var(--coral);
+  color: var(--gold-light);
   font-family: Georgia, serif;
   font-weight: 400;
 }
@@ -255,9 +257,9 @@ em {
     box-shadow 0.25s var(--ease);
 }
 .button-primary {
-  background: var(--coral);
+  background: var(--gold);
   color: var(--ink);
-  box-shadow: 0 14px 34px rgba(255, 118, 95, 0.18);
+  box-shadow: 0 14px 34px rgba(201, 166, 107, 0.24);
 }
 .button-dark {
   background: var(--ink);
@@ -302,7 +304,7 @@ em {
   bottom: -200px;
   background: radial-gradient(
     circle,
-    rgba(255, 118, 95, 0.13),
+    rgba(201, 166, 107, 0.13),
     transparent 68%
   );
 }
@@ -341,8 +343,8 @@ em {
 .conversation-head i {
   padding: 5px 8px;
   border-radius: 20px;
-  background: rgba(201, 255, 116, 0.12);
-  color: var(--lime);
+  background: var(--gold-soft);
+  color: var(--gold-light);
   font-style: normal;
 }
 .message {
@@ -468,7 +470,7 @@ em {
   letter-spacing: 0.03em;
 }
 .ticker i {
-  color: var(--coral);
+  color: var(--gold);
   font-style: normal;
 }
 .section {
@@ -522,7 +524,7 @@ em {
   left: 0;
   width: 100%;
   height: 3px;
-  background: var(--coral);
+  background: var(--gold);
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -543,7 +545,7 @@ em {
   border-color: var(--blue);
 }
 .service-card.featured::before {
-  background: var(--lime);
+  background: var(--gold-light);
 }
 .card-top {
   display: flex;
@@ -570,12 +572,12 @@ em {
 .service-prompt {
   min-height: 43px;
   margin: 47px 0 19px;
-  color: var(--coral) !important;
+  color: var(--gold) !important;
   font-size: 11px !important;
   font-weight: 700;
 }
 .featured .service-prompt {
-  color: var(--lime) !important;
+  color: var(--gold-light) !important;
 }
 .service-card h3 {
   margin: 0;
@@ -628,7 +630,7 @@ em {
 .process-progress {
   z-index: 1;
   width: 0;
-  background: var(--coral);
+  background: var(--gold);
   transition: width 1.4s var(--ease);
 }
 .process-line.visible .process-progress {
@@ -658,7 +660,7 @@ em {
   transition: background 0.3s 0.5s;
 }
 .process-line.visible i {
-  background: var(--coral);
+  background: var(--gold);
 }
 .process-line h3 {
   margin: 0;
@@ -764,10 +766,10 @@ em {
   z-index: 2;
 }
 .learning-panel .kicker {
-  color: var(--lime);
+  color: var(--gold-light);
 }
 .learning-panel em {
-  color: var(--lime);
+  color: var(--gold-light);
 }
 .learning-panel p {
   margin: 0 0 17px;
@@ -802,7 +804,7 @@ em {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--lime);
+  background: var(--gold-light);
 }
 .radar-orbit span {
   top: 50px;
@@ -811,7 +813,7 @@ em {
 .radar-orbit i {
   top: 180px;
   left: -5px;
-  background: var(--coral);
+  background: var(--gold);
 }
 .radar-orbit b {
   top: 90px;
@@ -871,7 +873,7 @@ em {
   transition: color 0.2s;
 }
 .footer-grid a:hover {
-  color: var(--coral);
+  color: var(--gold);
 }
 .footer-bottom {
   display: flex;
@@ -939,7 +941,7 @@ em {
 .boundary {
   margin: 30px 0;
   padding: 20px;
-  border-left: 3px solid var(--coral);
+  border-left: 3px solid var(--gold);
   background: var(--paper-2);
   font-size: 13px;
   line-height: 1.7;
@@ -949,6 +951,7 @@ em {
 }
 .radar-list {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 .radar-empty {
@@ -968,6 +971,118 @@ em {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.7;
+}
+.radar-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 18px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-top: 3px solid rgba(18, 18, 27, 0.18);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 20px 45px rgba(18, 18, 27, 0.07);
+}
+.radar-card.radar-immediate {
+  border-top-color: var(--gold);
+}
+.radar-card.radar-apply {
+  border-top-color: var(--blue);
+}
+.radar-status {
+  width: fit-content;
+  min-height: 30px;
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: rgba(18, 18, 27, 0.08);
+  color: var(--ink);
+  font:
+    800 10px/1 Manrope,
+    sans-serif;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.radar-immediate .radar-status {
+  background: var(--gold-soft);
+}
+.radar-apply .radar-status {
+  background: rgba(91, 97, 255, 0.13);
+  color: var(--blue);
+}
+.radar-card h3 {
+  margin: 0;
+  font:
+    600 clamp(22px, 2.4vw, 30px) / 1.12 Manrope,
+    sans-serif;
+  letter-spacing: -0.04em;
+}
+.radar-card dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+}
+.radar-card dl div {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7);
+}
+.radar-card dt {
+  margin-bottom: 5px;
+  color: var(--muted);
+  font:
+    800 9px/1 Manrope,
+    sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.radar-card dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.radar-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+.radar-card-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 4px;
+}
+.radar-card-bottom > span {
+  color: var(--muted);
+  font:
+    800 10px/1.4 Manrope,
+    sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.radar-card-bottom a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+}
+.radar-card-bottom a:hover,
+.radar-card-bottom a:focus-visible {
+  color: var(--gold);
+  outline: none;
 }
 .community-box {
   display: grid;
@@ -1051,7 +1166,7 @@ em {
 }
 .whatsapp-qr .kicker {
   margin-bottom: 12px;
-  color: var(--lime);
+  color: var(--gold-light);
 }
 .whatsapp-qr h3 {
   margin: 0;
@@ -1066,7 +1181,11 @@ em {
   line-height: 1.65;
 }
 .whatsapp-qr div > a {
-  color: var(--coral);
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold-light);
   font-size: 12px;
   font-weight: 700;
 }
@@ -1150,10 +1269,10 @@ em {
 @keyframes pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 5px rgba(255, 118, 95, 0.12);
+    box-shadow: 0 0 0 5px var(--gold-soft);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba(255, 118, 95, 0);
+    box-shadow: 0 0 0 10px rgba(201, 166, 107, 0);
   }
 }
 @keyframes ticker {
@@ -1173,8 +1292,8 @@ em {
   }
   .menu-button {
     display: grid;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     place-content: center;
     gap: 5px;
     border: 1px solid #3a3946;
@@ -1352,12 +1471,29 @@ em {
   .scenario-list {
     grid-template-columns: 1fr;
   }
+  .radar-list {
+    grid-template-columns: 1fr;
+  }
+  .radar-card {
+    padding: 22px;
+  }
+  .radar-card dl {
+    grid-template-columns: 1fr;
+  }
   .whatsapp-qr {
     grid-template-columns: 1fr;
     padding: 24px;
   }
+  .whatsapp-qr div > a {
+    width: 100%;
+    justify-content: center;
+    padding: 0 16px;
+    border-radius: 12px;
+    background: var(--gold);
+    color: var(--ink);
+  }
   .qr-image {
-    justify-self: start;
+    display: none;
   }
   .community-box {
     padding: 32px 22px;
