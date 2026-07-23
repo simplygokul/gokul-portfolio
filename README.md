@@ -23,3 +23,7 @@ Then open `http://localhost:8000`.
 ## Maintaining the IT Exposure Radar
 
 Replace the `.radar-empty` block in `learning-community.html` with checked entries. Each item should include the event name, type, online/offline status, location, date, deadline when available, why it is useful, direct registration link and last-checked date. Remove expired entries.
+
+## Design guardrail
+
+Gradient, dimensional and glow effects are reserved for the hero, primary actions, service markers and closing CTA. Body sections remain restrained, spacious and readable.

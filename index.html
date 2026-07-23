@@ -15,12 +15,13 @@
     <a class="brand" href="index.html" aria-label="Gokul Saradhi home">
       <span class="brand-mark">GS</span><span>Gokul Saradhi<small>Technology &amp; Digital Solutions</small></span>
     </a>
+    <a class="mobile-header-cta" href="contact.html" aria-label="Tell me about your situation">Tell me <span>↗</span></a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span class="sr-only">Menu</span></button>
     <nav id="site-nav" aria-label="Primary navigation">
       <a class="active" href="index.html">Home</a>
       <a href="learning-community.html">Learning &amp; Community</a>
       <a href="contact.html">Contact</a>
-      <a class="nav-action" href="contact.html">Tell me what you need <span>↗</span></a>
+      <a class="nav-action" href="contact.html">Tell me about your situation <span>↗</span></a>
     </nav>
   </header>
 
@@ -33,7 +34,7 @@
           <h1>Practical technology solutions for <em>people</em> and small businesses.</h1>
           <p class="hero-lead">Websites, business technology and software improvements—starting with a clear understanding of what you actually need.</p>
           <div class="action-row">
-            <a class="button button-primary magnetic" href="contact.html">Tell me what you need <span>↗</span></a>
+            <a class="button button-primary hero-primary magnetic" href="contact.html">Tell me about your situation <span>↗</span></a>
             <a class="text-action" href="#services">Explore services <span>↓</span></a>
           </div>
           <p class="hero-note">You do not need to know the technical terms. Explain the situation in your own words.</p>
@@ -64,27 +65,27 @@
     <section class="section services" id="services">
       <div class="shell">
         <div class="section-heading" data-reveal>
-          <div><p class="kicker">01 / Services</p><h2>Bring the problem.<br><em>We’ll find the path.</em></h2></div>
+          <div><p class="section-eyebrow">Does this sound familiar?</p><p class="kicker">01 / Services</p><h2>Bring the problem.<br><em>We’ll find the path.</em></h2></div>
           <p>Three clear starting points. If your requirement overlaps them, that is completely fine—we will clarify it together.</p>
         </div>
         <div class="service-grid">
           <article class="service-card" data-reveal>
-            <div class="card-top"><span>01</span><i class="service-icon">↗</i></div>
-            <p class="service-prompt">“I need a web presence.”</p>
+            <div class="card-top"><span>01</span><i class="service-icon service-icon-blue" aria-hidden="true"><span></span></i></div>
+            <p class="service-prompt">Need a website or a stronger digital presence?</p>
             <h3>Websites &amp;<br>Digital Presence</h3>
             <p>Development, redesigns, responsive improvements, updates, administration and essential online setup.</p>
             <a href="contact.html?reason=website">Discuss your website <span>↗</span></a>
           </article>
           <article class="service-card featured" data-reveal>
-            <div class="card-top"><span>02</span><i class="service-icon">◇</i></div>
-            <p class="service-prompt">“I run a business and want things to work better.”</p>
+            <div class="card-top"><span>02</span><i class="service-icon service-icon-violet" aria-hidden="true"><span></span></i></div>
+            <p class="service-prompt">Are repetitive business tasks taking too much time?</p>
             <h3>Business Technology<br>Solutions</h3>
             <p>Digitisation, tool selection, workflow improvements, practical AI use and simple automation suited to your business.</p>
             <a href="contact.html?reason=business">Improve a workflow <span>↗</span></a>
           </article>
           <article class="service-card" data-reveal>
-            <div class="card-top"><span>03</span><i class="service-icon">⌘</i></div>
-            <p class="service-prompt">“I know what needs to be built, improved or fixed.”</p>
+            <div class="card-top"><span>03</span><i class="service-icon service-icon-cyan" aria-hidden="true"><span></span></i></div>
+            <p class="service-prompt">Does existing software need to be built, fixed or improved?</p>
             <h3>Software Development<br>&amp; Improvements</h3>
             <p>Frontend development, UI and responsive issues, bug fixes and clearly scoped software implementation.</p>
             <a href="contact.html?reason=software">Discuss the requirement <span>↗</span></a>
@@ -99,12 +100,28 @@
           <div><p class="kicker">02 / How I work</p><h2>A clear process.<br><em>No unnecessary complexity.</em></h2></div>
           <p>Every engagement begins with understanding. Scope, amount and next steps are agreed privately before substantial work starts.</p>
         </div>
-        <div class="process-line" data-process>
-          <div class="process-progress"></div>
-          <article><span>01</span><i></i><h3>Understand</h3><p>You explain the situation in plain language.</p></article>
-          <article><span>02</span><i></i><h3>Suggest</h3><p>I identify a practical path and confirm if I can help.</p></article>
-          <article><span>03</span><i></i><h3>Work</h3><p>I complete the agreed scope with clear updates.</p></article>
-          <article><span>04</span><i></i><h3>Support</h3><p>I help with relevant follow-up after delivery.</p></article>
+        <div class="process-flow" data-process>
+          <div class="process-path" aria-hidden="true"></div>
+          <article>
+            <span class="process-marker">01</span>
+            <h3>Understand</h3>
+            <p>You explain the situation in plain language.</p>
+          </article>
+          <article>
+            <span class="process-marker">02</span>
+            <h3>Suggest</h3>
+            <p>I identify a practical path and confirm if I can help.</p>
+          </article>
+          <article>
+            <span class="process-marker">03</span>
+            <h3>Work</h3>
+            <p>I complete the agreed scope with clear updates.</p>
+          </article>
+          <article>
+            <span class="process-marker">04</span>
+            <h3>Support</h3>
+            <p>I help with relevant follow-up after delivery.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -113,43 +130,58 @@
       <div class="shell about-grid">
         <div data-reveal><p class="kicker">03 / About</p><h2>Engineering discipline, applied to <em>practical requirements.</em></h2></div>
         <div class="about-copy" data-reveal>
-          <p class="large-copy">I’m Gokul Saradhi, a software engineer with 3.5 years of production experience at Jio Platforms.</p>
+          <p class="large-copy">I’m Gokul Saradhi, a software engineer with 3.5 years of production frontend experience at Jio Platforms. My role there ended in January 2026, and I’m now taking on independent technology requirements while continuing to expand my skills.</p>
           <p>My background is in building and improving frontend applications with React, Next.js, JavaScript, TypeScript and REST APIs. I value direct communication, honest scoping and reliable implementation.</p>
-          <p>I’m currently expanding into Python, data structures and algorithms, full-stack development, system design and applied AI—strengthening the fundamentals behind the work I take on.</p>
+          <p>My role at Jio Platforms ended in January 2026. I’m now taking on independent technology requirements while expanding my skills in full-stack engineering, system design and applied AI.</p>
           <div class="value-list"><span>Honest scope</span><span>Clear updates</span><span>Responsible delivery</span></div>
         </div>
       </div>
       <div class="shell experience-cards">
         <article data-reveal><span>PRODUCTION EXPERIENCE</span><h3>Jio Platforms</h3><p>Frontend work across customer-facing applications and digital commerce experiences.</p><small>AUG 2022 — JAN 2026</small></article>
-        <article data-reveal><span>CURRENT DIRECTION</span><h3>Building broader foundations</h3><p>Continuing into full-stack engineering, system design and applied AI through structured learning and projects.</p><small>LEARNING IN PROGRESS</small></article>
+        <article data-reveal><span>CURRENT DIRECTION</span><h3>Independent requirements and broader foundations</h3><p>My role at Jio Platforms ended in January 2026. I’m now taking on independent technology requirements while expanding my skills in full-stack engineering, system design and applied AI.</p><small>LEARNING IN PROGRESS</small></article>
       </div>
     </section>
 
     <section class="section learning-preview">
       <div class="shell learning-panel" data-reveal>
-        <div><p class="kicker">Beyond client work</p><h2>Let’s learn and<br><em>grow together.</em></h2></div>
-        <div>
-          <p>Starting your technology journey, feeling stuck, or looking to connect with other IT enthusiasts?</p>
-          <p>Explore beginner guidance, carefully checked exposure opportunities and Tech Enthus—our WhatsApp community.</p>
+        <div class="learning-copy">
+          <p class="learning-eyebrow">Beyond client work</p>
+          <h2>Let’s learn and<br><em>grow together.</em></h2>
+          <p>Beginner guidance, checked opportunities and a small community for people learning technology.</p>
           <a class="button button-dark magnetic" href="learning-community.html">Explore Learning &amp; Community <span>↗</span></a>
+          <div class="radar-signal"><span></span>Latest opportunities, workshops and events</div>
         </div>
-        <div class="radar-orbit" aria-hidden="true"><span></span><i></i><b></b></div>
+        <div class="learning-signal" aria-label="Learning and community topics">
+          <div class="learning-rings" aria-hidden="true"><span></span><i></i><b></b></div>
+          <ul>
+            <li><span></span>Beginner guidance</li>
+            <li><span></span>IT Exposure Radar</li>
+            <li><span></span>Tech Enthus community</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section class="section final-cta dark-section">
       <div class="shell cta-grid" data-reveal>
         <div><p class="kicker">Have something in mind?</p><h2>Start with the requirement.<br><em>We’ll take it from there.</em></h2></div>
-        <div><p>You don’t need a finished brief. A simple explanation is enough to begin the conversation.</p><a class="button button-primary magnetic" href="contact.html">Tell me what you need <span>↗</span></a></div>
+        <div><p>You don’t need a finished brief. A simple explanation is enough to begin the conversation.</p><a class="button button-primary final-primary magnetic" href="contact.html">Tell me about your situation <span>↗</span></a></div>
       </div>
     </section>
   </main>
+
+  <section class="footer-action-strip">
+    <div class="shell footer-action-inner">
+      <p>Have a digital requirement or something that needs improving?</p>
+      <a class="button button-primary footer-action-button" href="contact.html">Tell me about your situation <span>↗</span></a>
+    </div>
+  </section>
 
   <footer class="site-footer">
     <div class="shell footer-grid">
       <div><a class="brand footer-brand" href="index.html"><span class="brand-mark">GS</span><span>Gokul Saradhi<small>Technology &amp; Digital Solutions</small></span></a><p>Practical technology solutions, with direct accountability.</p></div>
       <div><h3>Explore</h3><a href="index.html">Home</a><a href="learning-community.html">Learning &amp; Community</a><a href="contact.html">Contact</a></div>
-      <div><h3>Connect</h3><a href="https://github.com/simplygokul" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/gokul-saradhi-0830a365/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://x.com/simply_gokul" target="_blank" rel="noopener">X ↗</a></div>
+      <div><h3>Connect</h3><a href="https://github.com/simplygokul" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/gokul-saradhi-0830a365/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://x.com/simply_gokul" target="_blank" rel="noopener noreferrer">X ↗</a></div>
       <div><h3>Information</h3><a href="privacy.html">Privacy Policy</a><a href="terms.html">Working Terms</a></div>
     </div>
     <div class="shell footer-bottom"><span>© 2026 Gokul Saradhi</span><a href="#main">Back to top ↑</a></div>

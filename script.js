@@ -1,8 +1,14 @@
 (function(){
   const menu=document.querySelector('.menu-button');
   const nav=document.getElementById('site-nav');
-  menu?.addEventListener('click',()=>{const open=document.body.classList.toggle('menu-open');menu.setAttribute('aria-expanded',String(open))});
-  nav?.addEventListener('click',()=>{document.body.classList.remove('menu-open');menu?.setAttribute('aria-expanded','false')});
+  const setMenuOpen=(open)=>{
+    document.body.classList.toggle('menu-open',open);
+    document.documentElement.classList.toggle('menu-open',open);
+    menu?.setAttribute('aria-expanded',String(open));
+  };
+  menu?.addEventListener('click',()=>setMenuOpen(!document.documentElement.classList.contains('menu-open')));
+  nav?.addEventListener('click',event=>{if(event.target.closest('a'))setMenuOpen(false)});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&document.documentElement.classList.contains('menu-open')){setMenuOpen(false);menu?.focus()}});
 
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const reveals=document.querySelectorAll('[data-reveal]');
